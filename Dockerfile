@@ -6,4 +6,4 @@ RUN mvn -f /usr/src/app/pom.xml clean package
 
 # Run the artifact
 FROM public.ecr.aws/bitnami/tomcat:8.5  
-COPY --from=build /usr/src/app/target/ROOT.war /usr/local/tomcat/webapps/
+COPY --from=build /usr/src/app/target/ROOT.war /opt/bitnami/tomcat/webapps_default
